@@ -27,8 +27,9 @@ gulp.task('scripts', function () {
         .pipe(gulp.dest('./js'));
 });
 
-gulp.task('copyBk', function () {
+gulp.task('copyDep', function () {
     gulp.src('./node_modules/barekit/js/barekit.min.js').pipe(gulp.dest('./js/lib'));
+    gulp.src('./node_modules/html5shiv/dist/html5shiv.min.js').pipe(gulp.dest('./js/lib'));
 });
 
 gulp.task('watch', function () {

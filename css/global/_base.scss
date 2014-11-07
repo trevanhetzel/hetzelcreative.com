@@ -1,4 +1,4 @@
-html,body {
+html, body {
 	overflow-x: hidden;
 
 	@include breakpoint(medium) {
@@ -10,4 +10,37 @@ body {
 	position: relative;
 	min-height: 100%;
 	z-index: 1;
+	color: $text;
+}
+
+.wrapper {
+	margin: 0 auto;
+	padding: 5em 2em;
+	max-width: 72.75em;
+	overflow: hidden;
+}
+
+// Typography
+html, p {
+	font-size: Helvetica, Arial, sans-serif;
+}
+
+h1, h2 {
+	font-weight: 300;
+}
+
+.wf-active {
+	html, p {
+		font-family: 'Source Sans Pro';
+	}
+
+	h1, h2 {
+		font-family: 'Roboto Slab';
+	}
+}
+
+h2 {
+	margin: 0;
+	color: $grey;
+	@include font-size(43);
 }

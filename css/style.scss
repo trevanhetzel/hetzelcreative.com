@@ -4,6 +4,9 @@
 // Import BareKit
 @import "../node_modules/barekit/css/barekit";
 
+// Mixins
+@import "global/mixins";
+
 // Variables
 @import "global/variables";
 
@@ -11,3 +14,8 @@
 @import "global/base";
 
 // Module files
+@import "module/header";
+@import "module/hero";
+@import "module/intro";
+@import "module/work";
+@import "module/method";

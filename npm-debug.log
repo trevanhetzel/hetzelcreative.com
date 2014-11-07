@@ -1,0 +1,72 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.4.14
+3 info using node@v0.10.29
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/Projects/Hetzel Creative Redesign/hetzelcreative.com',
+5 verbose install   [ 'barekit',
+5 verbose install     'html5shiv',
+5 verbose install     'Picturefill',
+5 verbose install     'gulp',
+5 verbose install     'gulp-autoprefixer',
+5 verbose install     'gulp-concat',
+5 verbose install     'gulp-sass',
+5 verbose install     'gulp-uglify',
+5 verbose install     'gulp-minify-css' ] ]
+6 info preinstall hetzelcreative@3.0.0
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'Picturefill@2.2.0-beta', null ]
+9 verbose cache add name=undefined spec="Picturefill@2.2.0-beta" args=["Picturefill@2.2.0-beta",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'Picturefill@2.2.0-beta',
+10 verbose parsed url   path: 'Picturefill@2.2.0-beta',
+10 verbose parsed url   href: 'Picturefill@2.2.0-beta' }
+11 verbose already installed skipping barekit@^0.6.2 /Projects/Hetzel Creative Redesign/hetzelcreative.com
+12 verbose already installed skipping html5shiv@^3.7.2 /Projects/Hetzel Creative Redesign/hetzelcreative.com
+13 verbose already installed skipping gulp@^3.8.2 /Projects/Hetzel Creative Redesign/hetzelcreative.com
+14 verbose cache add name="Picturefill" spec="2.2.0-beta" args=["Picturefill","2.2.0-beta"]
+15 verbose parsed url { protocol: null,
+15 verbose parsed url   slashes: null,
+15 verbose parsed url   auth: null,
+15 verbose parsed url   host: null,
+15 verbose parsed url   port: null,
+15 verbose parsed url   hostname: null,
+15 verbose parsed url   hash: null,
+15 verbose parsed url   search: null,
+15 verbose parsed url   query: null,
+15 verbose parsed url   pathname: '2.2.0-beta',
+15 verbose parsed url   path: '2.2.0-beta',
+15 verbose parsed url   href: '2.2.0-beta' }
+16 verbose addNamed [ 'Picturefill', '2.2.0-beta' ]
+17 verbose addNamed [ '2.2.0-beta', '2.2.0-beta' ]
+18 verbose already installed skipping gulp-autoprefixer@0.0.7 /Projects/Hetzel Creative Redesign/hetzelcreative.com
+19 silly lockFile c74d2eed-Picturefill-2-2-0-beta Picturefill@2.2.0-beta
+20 verbose lock Picturefill@2.2.0-beta /Users/trevan/.npm/c74d2eed-Picturefill-2-2-0-beta.lock
+21 verbose already installed skipping gulp-concat@^2.2.0 /Projects/Hetzel Creative Redesign/hetzelcreative.com
+22 verbose registry.get Picturefill not expired, no request
+23 silly lockFile c74d2eed-Picturefill-2-2-0-beta Picturefill@2.2.0-beta
+24 silly lockFile c74d2eed-Picturefill-2-2-0-beta Picturefill@2.2.0-beta
+25 error Error: version not found: Picturefill@2.2.0-beta
+25 error     at /usr/local/lib/node_modules/npm/lib/cache/add-named.js:123:12
+25 error     at RegClient.get_ (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:104:14)
+25 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:43:12)
+25 error     at fs.js:271:14
+25 error     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:105:5
+25 error     at Object.oncomplete (fs.js:107:15)
+26 error If you need help, you may report this *entire* log,
+26 error including the npm and node versions, at:
+26 error     <http://github.com/npm/npm/issues>
+27 error System Darwin 14.0.0
+28 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+29 error cwd /Projects/Hetzel Creative Redesign/hetzelcreative.com
+30 error node -v v0.10.29
+31 error npm -v 1.4.14
+32 verbose exit [ 1, true ]

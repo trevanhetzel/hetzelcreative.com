@@ -1,0 +1,19 @@
+.intro-paragraph {
+	margin: 0 0 1.28em;
+	@include font-size(25);
+	line-height: 1.36em;
+	font-weight: 300;
+}
+
+.intro-img {
+	max-width: 100%;
+	border-radius: 50%;
+}
+
+.intro-name {
+	display: block;
+	margin: 1em auto 0;
+	color: $grey;
+	@include font-size(25);
+	font-weight: 300;
+}
