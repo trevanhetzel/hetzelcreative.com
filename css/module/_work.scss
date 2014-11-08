@@ -1,3 +1,24 @@
 .work {
 	border-top: 1px solid $border;
 }
+
+.work-list {
+	margin: 0 -10px;
+}
+
+.wl-item {
+	strong {
+		display: block;
+		padding: 10px;
+	}
+
+	em {
+		display: block;
+		background: $grey;
+		height: 10em;
+	}
+}
+
+.wl-item--tall strong em {
+	height: calc(20em + 20px);
+}
