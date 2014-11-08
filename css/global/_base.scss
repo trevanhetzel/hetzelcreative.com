@@ -44,3 +44,12 @@ h2 {
 	color: $grey;
 	@include font-size(43);
 }
+
+a {
+	color: $grey;
+	text-decoration: underline;
+
+	&:hover {
+		color: $text;
+	}
+}

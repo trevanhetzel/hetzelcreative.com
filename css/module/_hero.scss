@@ -8,3 +8,10 @@
 	@include font-size(43);
 	line-height: 1.25em;
 }
+
+.hero-author {
+	display: block;
+	@include font-size(14);
+	font-family: 'Source Sans Pro';
+	line-height: 1.75em;
+}
