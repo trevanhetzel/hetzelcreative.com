@@ -43,8 +43,8 @@ gulp.task('penthouse', function () {
     penthouse({
         url : 'index.html',
         css : path.join('css/style.css'),
-        width : 400,   // viewport width
-        height : 240   // viewport height
+        width : 1024,   // viewport width
+        height : 1080   // viewport height
     }, function(err, criticalCss) {
         console.log(criticalCss);
     });
