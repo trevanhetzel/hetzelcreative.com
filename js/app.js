@@ -1,4 +1,4 @@
-jQuery(function ($) {
+(function () {
 	WebFont.load({
 		google: {
 			families: [
@@ -9,4 +9,4 @@ jQuery(function ($) {
 			]
 		}
 	});
-});
+})();
