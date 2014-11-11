@@ -1,72 +1,79 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
-2 info using npm@1.4.14
-3 info using node@v0.10.29
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'barekit' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
 4 verbose readDependencies using package.json deps
-5 verbose install where, deps [ '/Projects/Hetzel Creative Redesign/hetzelcreative.com',
-5 verbose install   [ 'barekit',
-5 verbose install     'html5shiv',
-5 verbose install     'Picturefill',
-5 verbose install     'gulp',
-5 verbose install     'gulp-autoprefixer',
-5 verbose install     'gulp-concat',
-5 verbose install     'gulp-sass',
-5 verbose install     'gulp-uglify',
-5 verbose install     'gulp-minify-css' ] ]
-6 info preinstall hetzelcreative@3.0.0
-7 verbose readDependencies using package.json deps
-8 verbose cache add [ 'Picturefill@2.2.0-beta', null ]
-9 verbose cache add name=undefined spec="Picturefill@2.2.0-beta" args=["Picturefill@2.2.0-beta",null]
-10 verbose parsed url { protocol: null,
-10 verbose parsed url   slashes: null,
-10 verbose parsed url   auth: null,
-10 verbose parsed url   host: null,
-10 verbose parsed url   port: null,
-10 verbose parsed url   hostname: null,
-10 verbose parsed url   hash: null,
-10 verbose parsed url   search: null,
-10 verbose parsed url   query: null,
-10 verbose parsed url   pathname: 'Picturefill@2.2.0-beta',
-10 verbose parsed url   path: 'Picturefill@2.2.0-beta',
-10 verbose parsed url   href: 'Picturefill@2.2.0-beta' }
-11 verbose already installed skipping barekit@^0.6.2 /Projects/Hetzel Creative Redesign/hetzelcreative.com
-12 verbose already installed skipping html5shiv@^3.7.2 /Projects/Hetzel Creative Redesign/hetzelcreative.com
-13 verbose already installed skipping gulp@^3.8.2 /Projects/Hetzel Creative Redesign/hetzelcreative.com
-14 verbose cache add name="Picturefill" spec="2.2.0-beta" args=["Picturefill","2.2.0-beta"]
-15 verbose parsed url { protocol: null,
-15 verbose parsed url   slashes: null,
-15 verbose parsed url   auth: null,
-15 verbose parsed url   host: null,
-15 verbose parsed url   port: null,
-15 verbose parsed url   hostname: null,
-15 verbose parsed url   hash: null,
-15 verbose parsed url   search: null,
-15 verbose parsed url   query: null,
-15 verbose parsed url   pathname: '2.2.0-beta',
-15 verbose parsed url   path: '2.2.0-beta',
-15 verbose parsed url   href: '2.2.0-beta' }
-16 verbose addNamed [ 'Picturefill', '2.2.0-beta' ]
-17 verbose addNamed [ '2.2.0-beta', '2.2.0-beta' ]
-18 verbose already installed skipping gulp-autoprefixer@0.0.7 /Projects/Hetzel Creative Redesign/hetzelcreative.com
-19 silly lockFile c74d2eed-Picturefill-2-2-0-beta Picturefill@2.2.0-beta
-20 verbose lock Picturefill@2.2.0-beta /Users/trevan/.npm/c74d2eed-Picturefill-2-2-0-beta.lock
-21 verbose already installed skipping gulp-concat@^2.2.0 /Projects/Hetzel Creative Redesign/hetzelcreative.com
-22 verbose registry.get Picturefill not expired, no request
-23 silly lockFile c74d2eed-Picturefill-2-2-0-beta Picturefill@2.2.0-beta
-24 silly lockFile c74d2eed-Picturefill-2-2-0-beta Picturefill@2.2.0-beta
-25 error Error: version not found: Picturefill@2.2.0-beta
-25 error     at /usr/local/lib/node_modules/npm/lib/cache/add-named.js:123:12
-25 error     at RegClient.get_ (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:104:14)
-25 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:43:12)
-25 error     at fs.js:271:14
-25 error     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:105:5
-25 error     at Object.oncomplete (fs.js:107:15)
-26 error If you need help, you may report this *entire* log,
-26 error including the npm and node versions, at:
-26 error     <http://github.com/npm/npm/issues>
-27 error System Darwin 14.0.0
-28 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install"
-29 error cwd /Projects/Hetzel Creative Redesign/hetzelcreative.com
-30 error node -v v0.10.29
-31 error npm -v 1.4.14
-32 verbose exit [ 1, true ]
+5 verbose cache add [ 'barekit@0.7.0', null ]
+6 verbose cache add name=undefined spec="barekit@0.7.0" args=["barekit@0.7.0",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'barekit@0.7.0',
+7 verbose parsed url   path: 'barekit@0.7.0',
+7 verbose parsed url   href: 'barekit@0.7.0' }
+8 verbose cache add name="barekit" spec="0.7.0" args=["barekit","0.7.0"]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: '0.7.0',
+9 verbose parsed url   path: '0.7.0',
+9 verbose parsed url   href: '0.7.0' }
+10 verbose addNamed [ 'barekit', '0.7.0' ]
+11 verbose addNamed [ '0.7.0', '0.7.0' ]
+12 silly lockFile 65127cda-barekit-0-7-0 barekit@0.7.0
+13 verbose lock barekit@0.7.0 /Users/trevan/.npm/65127cda-barekit-0-7-0.lock
+14 verbose request where is /barekit
+15 verbose request registry https://registry.npmjs.org/
+16 verbose request id 5853566233447cac
+17 verbose url raw /barekit
+18 verbose url resolving [ 'https://registry.npmjs.org/', './barekit' ]
+19 verbose url resolved https://registry.npmjs.org/barekit
+20 verbose request where is https://registry.npmjs.org/barekit
+21 info trying registry request attempt 1 at 09:57:03
+22 verbose etag "3X7PNJMEYBDNDFSCOG2N7LGKI"
+23 http GET https://registry.npmjs.org/barekit
+24 http 304 https://registry.npmjs.org/barekit
+25 silly registry.get cb [ 304,
+25 silly registry.get   { date: 'Sat, 08 Nov 2014 15:57:03 GMT',
+25 silly registry.get     server: 'Apache',
+25 silly registry.get     via: '1.1 varnish',
+25 silly registry.get     'last-modified': 'Sat, 08 Nov 2014 15:57:03 GMT',
+25 silly registry.get     'cache-control': 'max-age=60',
+25 silly registry.get     etag: '"3X7PNJMEYBDNDFSCOG2N7LGKI"',
+25 silly registry.get     age: '0',
+25 silly registry.get     'x-served-by': 'cache-atl6224-ATL',
+25 silly registry.get     'x-cache': 'MISS',
+25 silly registry.get     'x-cache-hits': '0',
+25 silly registry.get     'x-timer': 'S1415462223.529279,VS0,VE111',
+25 silly registry.get     vary: 'Accept',
+25 silly registry.get     'content-length': '0',
+25 silly registry.get     'keep-alive': 'timeout=10, max=50',
+25 silly registry.get     connection: 'Keep-Alive' } ]
+26 verbose etag https://registry.npmjs.org/barekit from cache
+27 silly lockFile 65127cda-barekit-0-7-0 barekit@0.7.0
+28 silly lockFile 65127cda-barekit-0-7-0 barekit@0.7.0
+29 error Error: version not found: barekit@0.7.0
+29 error     at /usr/local/lib/node_modules/npm/lib/cache/add-named.js:125:12
+29 error     at saved (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:167:7)
+29 error     at Object.oncomplete (fs.js:107:15)
+30 error If you need help, you may report this *entire* log,
+30 error including the npm and node versions, at:
+30 error     <http://github.com/npm/npm/issues>
+31 error System Darwin 14.0.0
+32 error command "node" "/usr/local/bin/npm" "install" "barekit"
+33 error cwd /Projects/hetzelcreative.com
+34 error node -v v0.10.33
+35 error npm -v 1.4.28
+36 verbose exit [ 1, true ]

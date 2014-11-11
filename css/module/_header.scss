@@ -1,8 +1,31 @@
 .header {
-	padding: 2.5em 0 2.1875em;
+	padding: .75em 0 .5em;
+
+	@include breakpoint(medium) {
+		padding: 1.5em 0 1.1875em;
+	}
+
+	@include breakpoint(large) {
+		padding: 2.5em 0 2.1875em;
+	}
 }
 
 .header-icon {
-	width: 8.6875em;
-	height: 8.75em;
+	width: 4em;
+	height: 3.96em;
+
+	@include breakpoint(small) {
+		width: 6em;
+		height: 5.96em;
+	}
+
+	@include breakpoint(medium) {
+		width: 7em;
+		height: 7.96em;
+	}
+
+	@include breakpoint(large) {
+		width: 8.6875em;
+		height: 8.75em;
+	}
 }

@@ -10,7 +10,7 @@
         "url": "git://github.com/trevanhetzel/hetzelcreative.com.git"
     },
     "dependencies": {
-        "barekit": "^0.6.2",
+        "barekit": "^0.7.0",
         "html5shiv": "^3.7.2"
     },
     "devDependencies": {

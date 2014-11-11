@@ -2,7 +2,7 @@
 	display: block;
 	padding: .625em 2.5em;
 	color: #fff;
-	@include font-size(20);
+	@include font-size(14);
 	background: $red;
 	text-decoration: none;
 	border-radius: 1.563em;
@@ -11,5 +11,13 @@
 	&:hover {
 		color: $red;
 		background: #fff;
+	}
+
+	@include breakpoint(small) {
+		@include font-size(16);
+	}
+
+	@include breakpoint(medium) {
+		@include font-size(20);
 	}
 }

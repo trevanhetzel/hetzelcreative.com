@@ -1,21 +1,49 @@
 .intro-paragraph {
 	margin: 0 0 1.28em;
-	@include font-size(25);
+	@include font-size(16);
 	line-height: 1.36em;
 	font-weight: 300;
+
+	@include breakpoint(small) {
+		@include font-size(20);
+	}
+
+	@include breakpoint(large) {
+		@include font-size(25);
+	}
 }
 
 .intro-img {
-	max-width: 100%;
+	max-width: 35%;
 	border-radius: 50%;
+
+	@include breakpoint(small) {
+		max-width: 75%;
+	}
+
+	@include breakpoint(medium) {
+		max-width: 100%;
+	}
 }
 
 .intro-name {
 	display: block;
 	margin: 1em auto 0;
 	color: $grey;
-	@include font-size(25);
+	@include font-size(16);
 	font-weight: 300;
+
+	@include breakpoint(small) {
+		@include font-size(18);
+	}
+
+	@include breakpoint(medium) {
+		@include font-size(22);
+	}
+
+	@include breakpoint(large) {
+		@include font-size(25);
+	}
 }
 
 .intro-btn {

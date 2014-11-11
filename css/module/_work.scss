@@ -12,10 +12,11 @@
 		padding: 10px;
 	}
 
-	em {
+	em, img {
 		display: block;
 		background: $grey;
 		height: 10em;
+		max-width: 100%;
 	}
 }
 

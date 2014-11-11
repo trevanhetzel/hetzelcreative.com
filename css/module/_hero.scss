@@ -5,8 +5,20 @@
 
 .hero-heading {
 	margin: -1em 0;
-	@include font-size(43);
+	@include font-size(22);
 	line-height: 1.25em;
+
+	@include breakpoint(small) {
+		@include font-size(28);
+	}
+
+	@include breakpoint(medium) {
+		@include font-size(32);
+	}
+
+	@include breakpoint(large) {
+		@include font-size(43);
+	}
 }
 
 .hero-author {
