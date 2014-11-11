@@ -3,7 +3,9 @@ var gulp = require('gulp'),
     prefix = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
-    minifyCSS = require('gulp-minify-css');
+    minifyCSS = require('gulp-minify-css'),
+    penthouse = require('penthouse'),
+    path = require('path');
 
 var paths = {
     styles: 'css/**/*.scss',
@@ -35,6 +37,17 @@ gulp.task('copyDep', function () {
 gulp.task('watch', function () {
     gulp.watch(paths.styles, ['styles']);
     gulp.watch(paths.scripts, ['scripts']);
+});
+
+gulp.task('penthouse', function () {
+    penthouse({
+        url : 'index.html',
+        css : path.join('css/style.css'),
+        width : 400,   // viewport width
+        height : 240   // viewport height
+    }, function(err, criticalCss) {
+        console.log(criticalCss);
+    });
 });
 
 // The default task (called when you run `gulp` from cli)

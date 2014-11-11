@@ -10,7 +10,39 @@
             <script src="js/lib/html5shiv.min.js"></script>
         <![endif]-->
 
-        <link rel="stylesheet" href="css/style.css">
+        <style>html{-moz-box-sizing:border-box;box-sizing:border-box}*,:before,:after{-moz-box-sizing:inherit;box-sizing:inherit}.text-center{text-align:center}.text-right{text-align:right}.row:after{content:"";display:table;clear:both}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;height:100%}body{margin:0}header,section{display:block}a{background:transparent}h1{font-size:2em;margin:.67em 0}img{border:0}svg:not(:root){overflow:hidden}html,body{overflow-x:hidden}@media (min-width:56.25em){html,body{overflow-x:scroll}}body{position:relative;min-height:100%;z-index:1;color:#222}.wrapper{margin:0 auto;padding:3em 1em;max-width:80em;overflow:hidden}@media (min-width:37.5em){.wrapper{padding:4em 2em}}@media (min-width:75em){.wrapper{padding:5em 2em}}html{font-size:Helvetica,Arial,sans-serif}h1{font-weight:300}a{color:#7b7a7a;text-decoration:underline}.header{padding:.75em 0 .5em}@media (min-width:56.25em){.header{padding:1.5em 0 1.1875em}}@media (min-width:75em){.header{padding:2.5em 0 2.1875em}}.header-icon{width:4em;height:3.96em}@media (min-width:37.5em){.header-icon{width:6em;height:5.96em}}@media (min-width:56.25em){.header-icon{width:7em;height:7.96em}}@media (min-width:75em){.header-icon{width:8.6875em;height:8.75em}}.hero{border-top:1px solid #e5eef1;border-bottom:1px solid #e5eef1}.hero-heading{margin:-1em 0;font-size:22px;font-size:1.375rem;line-height:1.25em}@media (min-width:37.5em){.hero-heading{font-size:28px;font-size:1.75rem}}@media (min-width:56.25em){.hero-heading{font-size:32px;font-size:2rem}}@media (min-width:75em){.hero-heading{font-size:43px;font-size:2.6875rem}}.hero-author{display:block;font-size:14px;font-size:.875rem;font-family:'Source Sans Pro';line-height:1.75em}</style>
+
+        <script>
+            function loadCSS( href, before, media ){
+                "use strict";
+                var ss = window.document.createElement( "link" );
+                var ref = before || window.document.getElementsByTagName( "script" )[ 0 ];
+                var sheets = window.document.styleSheets;
+                ss.rel = "stylesheet";
+                ss.href = href;
+                ss.media = "only x";
+                ref.parentNode.insertBefore( ss, ref );
+                function toggleMedia(){
+                    var defined;
+                    for( var i = 0; i < sheets.length; i++ ){
+                        if( sheets[ i ].href && sheets[ i ].href.indexOf( href ) > -1 ){
+                            defined = true;
+                        }
+                    }
+                    if( defined ){
+                        ss.media = media || "all";
+                    }
+                    else {
+                        setTimeout( toggleMedia );
+                    }
+                }
+                toggleMedia();
+                return ss;
+            }
+
+            loadCSS( "css/style.css" );
+        </script>
+        <noscript><link href="css/style.css" rel="stylesheet"></noscript>
     </head>
 
     <body>
