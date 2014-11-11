@@ -7,19 +7,69 @@
 }
 
 .wl-item {
-	strong {
-		display: block;
-		padding: 10px;
-	}
-
-	em, img {
+	em, picture {
 		display: block;
 		background: $grey;
 		height: 10em;
 		max-width: 100%;
 	}
+
+	&.zumba {
+		picture {
+			background: #dae251;
+		}
+	}
+
+	&.celebrity {
+		picture {
+			background: #268ac9;
+		}
+	}
+
+	&.microsoft {
+		picture {
+			background: #002d74;
+		}
+	}
+
+	&.datum-graph {
+
+	}
+
+	&.has-bg {
+		img {
+			max-width: 70%;
+
+			@include breakpoint(small) {
+				max-width: 50%;
+			}
+		}
+	}
 }
 
-.wl-item--tall strong em {
-	height: calc(20em + 20px);
+.wli-contain {
+	display: block;
+	position: relative;
+	padding: 10px;
+
+	img,
+	source {
+		display: block;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		left: 0;
+		margin: 0 auto;
+		transform: translateY(-50%);
+	}
+}
+
+.wl-item--tall .wli-contain picture {
+	@include breakpoint(small) {
+		height: calc(20em + 20px);
+
+		img {
+			max-width: 75%;
+		}
+	}
 }
