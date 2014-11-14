@@ -38,16 +38,20 @@ module.exports = function (grunt) {
             }
         },
 
-        concat: {
-            dist: {
-                src: [
-                    'node_modules/jquery/dist/cdn/jquery-2.1.1.min.js',
-                    'js/src/webfontloader.js',
-                    'js/src/picturefill.min.js',
-                    'node_modules/barekits/js/barekit.min.js',
-                    'js/src/app.js'
-                ],
-                dest: 'js/app.js',
+        /**
+         * Minify JS files
+         */
+        uglify: {
+            my_target: {
+                files: {
+                    'js/app.js': [
+                        'node_modules/jquery/dist/cdn/jquery-2.1.1.min.js',
+                        'js/src/webfontloader.js',
+                        'js/src/picturefill.min.js',
+                        'node_modules/barekits/js/barekit.min.js',
+                        'js/src/app.js'
+                    ]
+                }
             }
         },
 
@@ -99,13 +103,13 @@ module.exports = function (grunt) {
     // Load NPM Tasks
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-criticalcss');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Register Tasks
-    grunt.registerTask('default', [ 'sass', 'autoprefixer', 'concat' ]);
+    grunt.registerTask('default', [ 'sass', 'autoprefixer', 'uglify' ]);
     grunt.registerTask('critical', [ 'criticalcss', 'cssmin' ]);
 
 };
