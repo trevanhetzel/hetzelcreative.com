@@ -1,0 +1,63 @@
+input[type=text],
+input[type=email],
+textarea {
+	padding: 1.25rem;
+	margin: 0 0 1.5rem;
+	width: 100%;
+	background: $white;
+	border-radius: 4px;
+	border: 2px solid lighten($gray, 25%);
+	color: $secondary;
+	font-size: 1.6rem;
+	outline: none;
+
+	transition: border-color .2s;
+
+	&:focus {
+		border-color: $secondary;
+	}
+
+	.nf-error & {
+		border-color: $primary;
+	}
+
+	@include breakpoint(medium) {
+		padding: 2rem;
+		margin: 0 0 3rem;
+		font-size: 1.8rem;
+	}
+}
+
+::-webkit-input-placeholder {
+	color: $secondary;
+}
+
+:-moz-placeholder {
+	color: $secondary;
+}
+
+::-moz-placeholder {
+	color: $secondary;
+}
+
+:-ms-input-placeholder {
+	color: $secondary;
+}
+
+label {
+	display: inline-block;
+	margin: 0 0 .75rem;
+	font-weight: bold;
+	font-size: 1.6rem;
+
+	@include breakpoint(medium) {
+		font-size: 1.8rem;
+	}
+}
+
+.nf-before-form-content,
+.nf-after-form-content,
+.ninja-forms-req-symbol,
+.nf-after-field {
+	display: none;
+}

@@ -1,0 +1,130 @@
+.projects {
+	overflow: hidden;
+	max-width: $width-wide;
+	margin: 0 auto;
+	text-align: center;
+
+	& + .button {
+		clear: both;
+	}
+
+	@include state(home) {
+		.projects__item:last-of-type {
+			margin-bottom: 0;
+		}
+
+		@include breakpoint(small) {
+			.projects__item {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	@include breakpoint(medium) {
+		margin: 0 auto;
+	}
+
+	@include breakpoint(large) {
+		margin: 0 auto;
+	}
+}
+
+.projects__item {
+	position: relative;
+	margin: 0 0 .4rem;
+	color: $white;
+	text-decoration: none;
+
+	@include breakpoint(small) {
+		float: left;
+		width: 50%;
+
+		&:nth-child(odd) {
+			padding: 0 .4rem 0 0;
+		}
+
+		&:nth-child(even) {
+			padding: 0 0 0 .4rem;
+		}
+
+		&::before {
+			position: absolute;
+			top: 0;
+			content: "";
+			width: calc(100% - .8rem);
+			height: 100%;
+			background: rgba($primary, 0);
+			transition: background .2s;
+		}
+
+		&:hover {
+			&::before {
+				background: rgba($primary, .9);
+			}
+
+			.projects__hidden {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+
+		@include state(static) {
+			&:hover {
+				&::before {
+					background: rgba($primary, 0);
+				}
+			}
+		}
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	@include breakpoint(medium) {
+		margin: 0 0 1.6rem;
+
+		&:nth-child(odd) {
+			padding: 0 .8rem 0 0;
+
+			&::before {
+				left: 0;
+			}
+		}
+
+		&:nth-child(even) {
+			padding: 0 0 0 .8rem;
+
+			&::before {
+				left: .8rem;
+			}
+		}
+	}
+}
+
+.projects__caption {
+	display: block;
+	margin: 0;
+	padding: 1rem;
+	background: $light;
+	text-align: center;
+	color: $secondary;
+	font-size: 1.4rem;
+}
+
+.projects__hidden {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: transform .25s, opacity .25s;
+	transform: translateY(50%);
+	pointer-events: none;
+}

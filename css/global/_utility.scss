@@ -1,0 +1,43 @@
+.text-center {
+	text-align: center;
+}
+
+* {
+	@include state(margin) {
+		margin: 3rem auto;
+
+		@include breakpoint(medium) {
+			margin: 4.5rem auto;
+		}
+
+		@include breakpoint(large) {
+			margin: 6rem auto;
+		}
+	}
+
+	@include state(top-margin) {
+		margin: 3rem auto 0;
+
+		@include breakpoint(medium) {
+			margin: 4.5rem auto 0;
+		}
+
+		@include breakpoint(large) {
+			margin: 6rem auto 0;
+		}
+	}
+
+	@include state(small-margin) {
+		margin: 2rem auto 0;
+
+		@include breakpoint(medium) {
+			margin: 3rem auto 0;
+		}
+	}
+}
+
+.hide-medium {
+	@include breakpoint(680px) {
+		display: none !important;
+	}
+}

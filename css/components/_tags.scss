@@ -1,0 +1,18 @@
+.tags {
+	margin: 2rem 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.tag {
+	display: inline-block;
+	margin: 0 .5rem;
+	font-size: 1.6rem;
+	font-weight: 700;
+	color: $gray;
+	line-height: 1.4;
+
+	&:first-child {
+		margin: 0 .5rem 0 0;
+	}
+}

@@ -1,0 +1,33 @@
+/*!
+Theme Name: Hetzel Creative
+Theme URI: https://hetzelcreative.com
+
+Author: Trevan Hetzel
+Author URI: https://hetzelcreative.com
+
+Version: 6.0
+*/
+
+// Global
+@import "global/variables";
+@import "global/mixins";
+@import "global/normalize";
+@import "global/base";
+@import "global/layout";
+@import "global/typography";
+@import "global/utility";
+
+
+// Components
+@import "components/header";
+@import "components/nav";
+@import "components/hero";
+@import "components/projects";
+@import "components/button";
+@import "components/icons";
+@import "components/footer";
+@import "components/form";
+@import "components/split";
+@import "components/tags";
+@import "components/copy";
+@import "components/about";
