@@ -3,56 +3,45 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title><?php if( is_front_page() ) { ?> <?php bloginfo('description'); ?> <?php } ?> <?php wp_title(''); ?> | <?php bloginfo('name'); ?></title>
+	<title><?php echo wp_get_document_title(); ?></title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Vidaloka&display=swap" rel="stylesheet">
 
-	<?php include('partials/css.php'); ?>
+	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/meta/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/meta/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/meta/favicon-16x16.png">
+	<link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/meta/site.webmanifest">
 
-	<link href="https://fonts.googleapis.com/css?family=Cabin:400,700|Merriweather:700,700i" rel="stylesheet">
-
-	<?php include('partials/head-meta.php'); ?>
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="<?php echo wp_get_document_title(); ?>">
+	<meta property="og:url" content="<?php echo wp_get_canonical_url(); ?>">
+	<meta property="og:site_name" content="<?php echo get_bloginfo('name'); ?>">
+	<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/meta/og.jpg">
+	<meta property="og:image:width" content="2560">
+	<meta property="og:image:height" content="1451">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="twitter:card" content="summary_large_image">
 
 	<?php wp_head(); ?>
 </head>
-
-<?php
-if ( is_front_page() ) {
-	$post_slug = 'home';
-} else if ( get_post_type() == 'projects' ) {
-	$post_slug = 'work';
-} else {
-	global $post;
-	$post_slug = $post->post_name;
-}
-?>
-
-<body class="body-<?php echo $post_slug; ?>">
-	<header class="header" id="header">
-		<div class="contain">
-			<a href="<?php echo get_home_url(); ?>">
-				<img src="<?php echo get_template_directory_uri(); ?>/images/hetzelcreative-logo.svg" alt="Hetzel Creative" width="150" height="48">
-			</a>
-
-			<nav>
-				<ul class="nav">
-					<li class="home"><a href="<?php echo get_home_url(); ?>/">Home</a></li>
-					<li class="services"><a href="<?php echo get_home_url(); ?>/services">Services</a></li>
-					<li class="work"><a href="<?php echo get_home_url(); ?>/projects">Work</a></li>
-					<li class="about"><a href="<?php echo get_home_url(); ?>/about">About</a></li>
-					<li class="contact"><a href="<?php echo get_home_url(); ?>/contact" class="nav__button">Talk to us</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
-
-	<section class="hero <?php if(is_front_page() ) { ?>--home<?php } ?>">
-		<div class="contain">
-			<h1><?php global $pageTitle; echo $pageTitle; ?></h1>
-			<p class="--subtitle"><?php global $pageSubtitle; echo $pageSubtitle; ?></p>
-
-			<?php if ( is_front_page() ) { ?>
-				<a class="button --small-margin hide-medium" href="<?php echo get_home_url(); ?>/contact">Talk to us</a>
-			<?php } ?>
-		</div>
-	</section>
-
-	<section class="full">
+		
+	<body <?php body_class(); ?>>
+		<header class="w-full">
+			<section class='max-w-7xl mx-auto'>
+				<a href="<?php echo url(); ?>">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/logo@2x.png" alt="" width="" height="">
+				</a>
+				
+				<nav>
+					<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'menu_class' => 'nav-list', 'container' => '' ) ); ?>
+				</nav>
+				
+				<button>
+					<span></span>
+				</button>
+			</section>
+		</header>
+		

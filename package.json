@@ -1,8 +1,8 @@
 {
-	"name": "hetzel-creative",
-	"title": "Hetzel Creative",
-	"version": "2.0.0",
-	"description": "Hetzel Creative",
+	"name": "von-skvely-haus",
+	"title": "Von Skvely Haus",
+	"version": "1.0.0",
+	"description": "Von Skvely Haus",
 	"private": true,
 	"repository": {
 		"type": "git",

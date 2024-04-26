@@ -1,33 +1,20 @@
 /*!
 Theme Name: Hetzel Creative
-Theme URI: https://hetzelcreative.com
+Theme URI:
 
-Author: Trevan Hetzel
-Author URI: https://hetzelcreative.com
+Author: Hetzel Creative
+Author URI: http://hetzelcreative.com
 
-Version: 6.0
+Version: 0.1
+
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-// Global
-@import "global/variables";
-@import "global/mixins";
-@import "global/normalize";
-@import "global/base";
-@import "global/layout";
-@import "global/typography";
-@import "global/utility";
+@import "global/normalize.scss";
+@import "global/base.scss";
+@import "global/contact-form.scss";
 
-
-// Components
-@import "components/header";
-@import "components/nav";
-@import "components/hero";
-@import "components/projects";
-@import "components/button";
-@import "components/icons";
-@import "components/footer";
-@import "components/form";
-@import "components/split";
-@import "components/tags";
-@import "components/copy";
-@import "components/about";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

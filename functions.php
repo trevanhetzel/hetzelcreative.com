@@ -1,31 +1,68 @@
 <?php
+// Custom post types
+require get_template_directory() . '/inc/post-types.php';
 
-	// Remove WP emoji stuff
-	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+// Helper functions
+require get_template_directory() . '/inc/helpers.php';
 
-	// Dequeue WP embed script
-	add_action( 'wp_footer', 'my_deregister_scripts' );
+// Menus
+require get_template_directory() . '/inc/register-menus.php';
 
-	function my_deregister_scripts(){
-		wp_deregister_script( 'wp-embed' );
+// Enable post thumbnails
+require get_template_directory() . '/inc/image-sizes.php';
+
+// Insert ld-json structured data script
+require get_template_directory() . '/inc/ld-json.php';
+
+// Custom menu walkers
+require get_template_directory() . '/inc/walkers.php';
+
+// Custom UI "components"
+foreach (glob(get_template_directory() . '/components/*.php') as $filename) {
+	include $filename;
+}
+
+// Enqueue scripts
+function custom_scripts() {
+	wp_enqueue_script(
+		'custom-bundle',
+		esc_url( get_template_directory_uri() ) . '/app.min.js',
+		array(),
+		'1.0',
+		true
+	);
+}
+add_action( 'wp_enqueue_scripts', 'custom_scripts' );
+
+// Enqueue styles
+function custom_styles() {
+	wp_enqueue_style(
+		'custom-styles',
+		esc_url( get_template_directory_uri() ) . '/style.css',
+		array(),
+		'1.0'
+	);
+}
+add_action( 'wp_enqueue_scripts', 'custom_styles' );
+
+// Custom site title
+function custom_title($title) {
+	if (is_front_page()) {
+		return get_bloginfo('description') . ' — ' . get_bloginfo('name');
 	}
 
-	// Dequeue Ninja Forms assets
-	add_action( 'nf_display_enqueue_scripts', 'wpgood_nf_display_enqueue_scripts');
+	return $title;
+}
+add_filter('pre_get_document_title', 'custom_title');
 
-	function wpgood_nf_display_enqueue_scripts() {
-		wp_dequeue_style( 'nf-display' );
-		wp_dequeue_style( 'nf-font-awesome' );
-	}
+// Filter the except length
+function custom_excerpt_length( $length ) {
+	return 29;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
-	// Custom post types
-	require get_template_directory() . '/inc/post-types.php';
-
-	// Enable post thumbnails
-	require get_template_directory() . '/inc/thumbnails.php';
-
-	// ACF
-	require get_template_directory() . '/inc/acf.php';
-
-?>
+// Filter the excerpt "read more" string.
+function custom_excerpt_more( $more ) {
+	return '...';
+}
+add_filter( 'excerpt_more', 'custom_excerpt_more' );
